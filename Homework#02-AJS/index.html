@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    table,
+    th,
+    td {
+      border: 1px solid black;
+      border-radius: 2px;
+      padding: 20px;
+      background-color: rgb(206, 214, 221);
+    }
+
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      background-color: rgb(177, 162, 162);
+      font-size: 22px;
+    }
+
+    div,
+    label,
+    input,
+    button,
+    textarea {
+      padding: 2px;
+      margin: 8px;
+    }
+  </style>
+  <title>Homework02-AJS-ReminderApp</title>
+</head>
+
+<body>
+  <h1>Homework02-AJS-ReminderApp</h1><br>
+  <label for="title">Title:</label>
+  <input type="text" name="title" id="title">
+  <label for="priority">Priority:</label>
+  <select name="priority" id="priority">
+    <option value=""></option>
+    <option value="high">High</option>
+    <option value="medium">Medium</option>
+    <option value="low">Low</option>
+  </select>
+
+  <label for="color">Color:</label>
+  <input type="color" id="color">
+
+  <label for="description">Description:</label>
+  <textarea name="description" id="description" cols="30" rows="6"></textarea>
+  <button id="createRemainderButton">Create Reminder</button>
+  <button id="showRemainderButton">Show remainders</button>
+  <div class="result" id="result"></div>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>
