@@ -62,8 +62,8 @@ function createNexBtn() {
   const nextBtn = document.createElement("button");
   nextBtn.innerText = "Show Next 10 Planets";
   btnNext.appendChild(nextBtn);
-  nextBtn.addEventListener("click", () => {
-    callToApi(BASE_URL2);
+  nextBtn.addEventListener("click", async () => {
+    await callToApi(BASE_URL2);
     createPrevBtn();
     nextBtn.style.display = "none";
   });
@@ -73,15 +73,15 @@ function createPrevBtn() {
   const prevBtn = document.createElement("button");
   prevBtn.innerText = "Show Previous 10 Planets";
   btnNext.appendChild(prevBtn);
-  prevBtn.addEventListener("click", () => {
-    callToApi(BASE_URL1);
+  prevBtn.addEventListener("click", async () => {
+    await callToApi(BASE_URL1);
     createNexBtn();
     prevBtn.style.display = "none";
   });
 }
 
-btn.addEventListener("click", () => {
-  callToApi(BASE_URL1);
+btn.addEventListener("click", async () => {
+  await callToApi(BASE_URL1);
   btn.style.visibility = "hidden";
   createNexBtn();
 });
