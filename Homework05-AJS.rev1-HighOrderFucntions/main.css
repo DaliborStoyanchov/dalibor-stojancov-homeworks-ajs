@@ -1,0 +1,12 @@
+#buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+ul {
+  list-style: none;
+}
+
+div {
+  margin: 30px 20%;
+}
